@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js", // Entry point for your serverless function
+      "use": "@vercel/node" // Specify the framework or runtime
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)", // Match any API routes under /api
+      "dest": "/api/index.js" // Redirect to the main API handler
+    }
+  ]
+}
