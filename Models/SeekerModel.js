@@ -29,9 +29,9 @@ const SeekerSchema = new mongoose.Schema({
     type: String,
     enum: ["none", "pending", "approved", "rejected"],
     default: "none",
-  }
+  },
   
-});
+},{timestamps:true});
 
 const SeekerModel = mongoose.model('beneficiary', SeekerSchema);
 
